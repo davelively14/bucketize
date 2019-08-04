@@ -1,3 +1,15 @@
+//! This is top level documention
+//! Explains the crate
+
+/// Created doucment attributes for the items immediately following
+/// NOUN: description
+///
+/// # Example
+/// ```
+/// use bucketizer::Bucketizer;
+///
+/// ```
+/// And use asserts...cargo will test your docs to confirm that they work
 #[derive(Clone, Debug, PartialEq)]
 pub struct Bucketizer {
     buckets: Vec<Bucket>,
@@ -12,8 +24,7 @@ impl Bucketizer {
         }
     }
 
-    // Instead of taking mutible reference, take ownership and return. Allows
-    // for chaining. Called the "builder pattern".
+    /// Talk about each function, repeating examples from top line is fine
     pub fn bucket(self, min: Option<f64>, max: Option<f64>, value: f64) -> Self {
         let mut new = self;
 
